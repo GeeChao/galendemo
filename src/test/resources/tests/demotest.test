@@ -1,0 +1,3 @@
+Home page on a small mobile device
+    http://example.com/home     320x600
+        check   homepage.gspec --include "mobile,all" --exclude "nomobile"

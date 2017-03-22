@@ -14,6 +14,7 @@ public class LoginPageTest extends GalenTestBase {
         load("/");
         getDriver().findElement(By.xpath("//button[.='Login']")).click();
         checkLayout("/specs/loginPage.gspec", device.getTags());
+
     }
 
     @Test(dataProvider = "devices")

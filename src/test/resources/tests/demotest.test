@@ -11,7 +11,7 @@ Tutorial 1 short test
         check src/test/resources/specs/tutorial1.gspec
 
 @@ groups dump
-Tutorial 1 short test
+Tutorial 1 dump
     http://samples.galenframework.com/tutorial1/tutorial1.html 640x480
         dump src/test/resources/specs/tutorial1.gspec --name "Tutorial1" --export output/dumps
 
@@ -28,7 +28,7 @@ Welcome page on a desktop
     | Old PC        | desktop   | ${desktopsize}|
 Login page on ${deviceName} device
     ${domain}   ${size}
-        run src/test/resources/tests/demonavigate.js
+        run src/test/java/org/stag/components/demonavigate.js
         check src/test/resources/specs/loginPage.gspec
 
 

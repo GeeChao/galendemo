@@ -101,6 +101,10 @@
                 <version>${maven.surefire.version}</version>
                 <configuration>
                     <properties>
+                        <property>
+                            <name>webdriver.chrome.driver</name>
+                            <value>src/test/resources/drivers/chromedriver_win32.exe</value>
+                        </property>
                         <property><name>usedefaultlisteners</name><value>false</value></property>
                         <property>
                             <name>listener</name>

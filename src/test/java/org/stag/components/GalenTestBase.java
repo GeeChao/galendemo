@@ -3,6 +3,7 @@ package org.stag.components;
 import com.galenframework.testng.GalenTestNgTestBase;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.DataProvider;
 
@@ -16,7 +17,9 @@ public abstract class GalenTestBase extends GalenTestNgTestBase {
 
     @Override
     public WebDriver createDriver(Object[] args) {
-        WebDriver driver = new FirefoxDriver();
+//        WebDriver driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_win32.exe");
+        WebDriver driver = new ChromeDriver();
         if (args.length > 0) {
             if (args[0] != null && args[0] instanceof TestDevice) {
                 TestDevice device = (TestDevice)args[0];

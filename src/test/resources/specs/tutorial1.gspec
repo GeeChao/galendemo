@@ -1,0 +1,26 @@
+@objects
+    header              id      header
+    footer              id      footer
+    content             id      content
+    side-panel          id      side-panel
+    menu                id      menu
+
+
+= Main section =
+    header:
+        height 40px
+        width 100% of screen/width
+    footer:
+        below content
+        width ~ 195% of content/width
+    content:
+        aligned horizontally all side-panel
+        left-of side-panel
+    side-panel:
+        below menu 0 px
+        right-of content ~ 0 px
+    menu:
+        above content 0 px
+        above side-panel 0 px
+
+

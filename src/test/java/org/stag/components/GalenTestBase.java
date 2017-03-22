@@ -32,6 +32,7 @@ public abstract class GalenTestBase extends GalenTestNgTestBase {
         getDriver().get(ENV_URL + uri);
     }
 
+    //List browser types here
     @DataProvider(name = "devices")
     public Object [][] devices () {
         return new Object[][] {

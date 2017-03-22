@@ -1,3 +1,34 @@
-Home page on a small mobile device
-    http://example.com/home     320x600
-        check   homepage.gspec --include "mobile,all" --exclude "nomobile"
+@@set
+    domain http://testapp.galenframework.com
+    desktopsize 1024x800
+    tabletsize  750x800
+    mobilesize 450x800
+
+
+@@ groups desktop
+Tutorial 1 short test
+    http://samples.galenframework.com/tutorial1/tutorial1.html 640x480
+        check src/test/resources/specs/tutorial1.gspec
+
+@@ groups dump
+Tutorial 1 short test
+    http://samples.galenframework.com/tutorial1/tutorial1.html 640x480
+        dump src/test/resources/specs/tutorial1.gspec --name "Tutorial1" --export output/dumps
+
+@@ groups desktop, welcome page
+Welcome page on a desktop
+    http://testapp.galenframework.com   1024x800
+        check   src/test/resources/specs/welcomePage.gspec
+
+@@ groups desktop, mobile, tablet, loginpage
+@@ parameterized
+    | deviceName    | tags      | size          |
+    | Samsung S4    | mobile    | ${mobilesize} |
+    | Ipad          | tablet    | ${tabletsize} |
+    | Old PC        | desktop   | ${desktopsize}|
+Login page on ${deviceName} device
+    ${domain}   ${size}
+        run src/test/resources/tests/demonavigate.js
+        check src/test/resources/specs/loginPage.gspec
+
+

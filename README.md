@@ -1,6 +1,11 @@
 # galendemo
 
 
+ToDo
+* syntax slide
+* test suite slide
+* CLI slide
+
 Run Test
 * galen check src/test/resources/specs/tutorial1.gspec --url http://samples.galenframework.com/tutorial1/tutorial1.html --size 640x480 --htmlreport output/singletest
 Run Test Suite

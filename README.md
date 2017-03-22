@@ -1,15 +1,11 @@
 # galendemo
 
 
-ToDo
-* syntax slide
-* test suite slide
-* CLI slide
-
 ## On Windows
 * System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_win32.exe");
 * WebDriver driver = new ChromeDriver();
 * -Dwebdriver.chrome.driver=src/test/resources/drivers/chromedriver_win32.exe
+
 
 ## CLI cmds
 Run Test
